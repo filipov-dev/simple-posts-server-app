@@ -14,6 +14,7 @@ require 'action_controller/railtie'
 # require "action_text/engine"
 require 'action_view/railtie'
 # require "action_cable/engine"
+require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -42,5 +43,10 @@ module Server
     config.hosts.clear
 
     config.active_record.schema_format = :sql
+
+    config.session_store :cookie_store, key: '_simple_posts_session'
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Flash
+    config.middleware.use config.session_store, config.session_options
   end
 end

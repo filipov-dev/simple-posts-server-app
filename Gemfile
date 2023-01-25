@@ -63,3 +63,16 @@ gem 'oj', '~> 3.13'
 gem 'sentry-ruby', '~> 5.7'
 
 gem 'sentry-rails', '~> 5.7'
+
+gem 'russian', '~> 0.6.0'
+
+gem 'activeadmin', '~> 2.13'
+gem 'activeadmin_addons'
+gem 'active_admin_paranoia', '~> 1.0'
+gem 'arctic_admin', '~> 3.3'
+gem 'devise', '~> 4.8'
+
+gem 'sprockets-rails'
+gem 'sassc-rails'
+
+gem 'aws-sdk-s3', '~> 1.114'
